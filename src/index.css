@@ -1,0 +1,62 @@
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  body {
+    @apply tracking-wider font-secondary text-text;
+  }
+
+
+  
+  @layer base {
+    body {
+      background-color: var(--primary-background-color);
+    }
+
+    
+    h1 {
+      @apply text-xl text-text font-primary tracking-primary leading-tertiary;
+    }
+
+    h2 {
+      @apply text-large text-text font-primary tracking-primary font-primary;
+    }
+
+    h3 {
+      @apply text-medium text-text font-primary tracking-primary;
+    }
+
+    p {
+      @apply text-small text-paragraph font-secondary font-primary leading-primary;
+    }
+
+    @media (max-width: 768px) {
+      h1, h2 {
+        @apply text-medium;
+      }
+    }
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  } 
+  
+  .animate-spin {
+    animation: spin 1s linear infinite;
+  }
+    
+  .swiper-slide {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  
